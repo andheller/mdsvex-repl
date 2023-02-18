@@ -31,7 +31,9 @@
 		"rollup": "^2.77.2",
 		"svelte-json-tree": "^1.0.0",
 		"y-codemirror.next": "^0.3.2",
-		"yjs": "^13.5.46"
+		"yjs": "^13.5.46",
+		"y-indexeddb": "^9.0.9",
+		"y-webrtc": "^10.2.3"
 	},
 	"type": "module"
 }

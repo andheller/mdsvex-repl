@@ -1,15 +1,15 @@
 <script>
-  export let compiled;
+	export let compiled;
 
-  let iframe;
+	let iframe;
 
-  function update(code) {
-    iframe.contentWindow.postMessage(code, "*");
-  }
+	function update(code) {
+		iframe.contentWindow.postMessage(code, '*');
+	}
 
-  $: iframe && compiled && update(compiled);
+	$: iframe && compiled && update(compiled);
 
-  const srcdoc = `
+	const srcdoc = `
 <!doctype html>
 <html>
 	<head>
@@ -34,19 +34,15 @@
 			}, false)
 
 		<\/script>
-		<\script src="https://cdn.tailwindcss.com"><\/script>
+		<\script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"><\/script>
+		
 
 	</head>
-	<body></body>
+	<body class="prose"></body>
 </html>
 	`;
 </script>
 
 <section class="h-full w-full">
-  <iframe
-    class="w-full h-full"
-    title="Rendered REPL"
-    bind:this={iframe}
-    {srcdoc}
-  />
+	<iframe class="w-full h-full" title="Rendered REPL" bind:this={iframe} {srcdoc} />
 </section>

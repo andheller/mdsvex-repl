@@ -1,7 +1,7 @@
 <script>
-	import Replicant from '$lib/repl/index.svelte';
+	import Replican from '$lib/repl/index.svelte';
 </script>
 
 <div class="h-full">
-	<Replicant />
+	<Replican />
 </div>
